@@ -3,27 +3,22 @@ plugins {
 }
 
 group = 'org.example'
-version = '1.0'
+version = '1'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation 'com.google.code.gson:gson:2.12.1'
 
 }
 
-test {
-    useJUnitPlatform()
-}
-
 jar {
     manifest {
         attributes "Main-Class": "App"
+        archiveBaseName.set("myname")
     }
     duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
     from {

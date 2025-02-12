@@ -9,9 +9,6 @@ public class App {
         myName.put("Name", "Volodymyr");
         myName.put("lastName", "Bodnarchuk");
 
-        Gson gson = new Gson();
-        final String json = gson.toJson(myName);
-
-        System.out.println(json);
+        System.out.println(new Gson().toJson(myName));
     }
 }
