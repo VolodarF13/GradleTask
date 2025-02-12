@@ -19,6 +19,7 @@ jar {
     manifest {
         attributes "Main-Class": "App"
         archiveBaseName.set("myname")
+        archiveVersion.set("")
     }
     duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
     from {
